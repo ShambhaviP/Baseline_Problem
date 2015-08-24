@@ -43,6 +43,20 @@ public class salestaxdriver {
         items.add(obj3);
         generateList(items);
         total(items);
+        salestaxcalculator(items);
+    }
+
+    private static void salestaxcalculator(ArrayList<Item> items) {
+
+        
+
+
+
+
+
+
+
+
 
     }
 
