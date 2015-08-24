@@ -46,8 +46,7 @@ public class salestaxdriver {
         System.out.println("\nReceipt");
                 generateList(items);
         total(items);
-        salestaxcalculator(items);
-
+        
     }
 
     private static double salestaxcalculator(ArrayList<Item> items) {
