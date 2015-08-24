@@ -41,7 +41,10 @@ public class salestaxdriver {
         items.add(obj1);
         items.add(obj2);
         items.add(obj3);
+        System.out.println("Input 1");
         generateList(items);
+        System.out.println("\nReceipt");
+                generateList(items);
         total(items);
         salestaxcalculator(items);
 
