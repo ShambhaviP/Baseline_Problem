@@ -41,34 +41,37 @@ public class salestaxdriver {
         items.add(obj1);
         items.add(obj2);
         items.add(obj3);
+        generateList(items);
+        total(items);
 
-
-       total(items);
-        salestaxcalculator();
     }
 
     private static void total(ArrayList<Item> items) {
    double sum=0;
 
-      /*Iterator itr=items.iterator();
-        while(itr.hasNext()){
 
-            double cost=itr.next().
-
-
-
-        }*/
 
         for(Item item1:items){
       double cost=item1.price;
       sum+=cost;
         }
-        
+         System.out.println("Total:"+sum);
 
     }
 
-    private static void salestaxcalculator() {
+    private static void generateList(ArrayList<Item> items) {
 
+
+  for(Item item2:items) {
+
+      int quantity=item2.qty;
+      String itemname=item2.name;
+      double price1=item2.price;
+
+      System.out.println(quantity+" "+itemname+" "+"at"+" "+price1);
+
+
+  }
 
     }
 
