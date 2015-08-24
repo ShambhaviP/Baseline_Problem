@@ -44,16 +44,35 @@ public class salestaxdriver {
         generateList(items);
         total(items);
         salestaxcalculator(items);
+
     }
 
-    private static void salestaxcalculator(ArrayList<Item> items) {
+    private static double salestaxcalculator(ArrayList<Item> items) {
 
-        
+        double basictax=0.0;
+        double import_duty=0.0;
 
+        for(Item item3:items) {
 
+            int quantity=item3.qty;
+            String itemname=item3.name;
+            double price1=item3.price;
 
+            if(itemname.equalsIgnoreCase("Book") || itemname.equalsIgnoreCase("box(es) of headache pills") || itemname.equalsIgnoreCase("chocolate bar")){
 
+                basictax+=0.0;
+            }
+            else basictax= 0.1*price1;
 
+            if(itemname.equalsIgnoreCase("imported")){
+                import_duty+=0.05*price1;
+            }
+
+        }
+
+     double totalsalestax=basictax+import_duty;
+
+    return totalsalestax;
 
 
 
@@ -69,7 +88,9 @@ public class salestaxdriver {
       double cost=item1.price;
       sum+=cost;
         }
-         System.out.println("Total:"+sum);
+        double totalamount=sum+salestaxcalculator(items);
+        System.out.println("Sales tax:"+salestaxcalculator(items));
+         System.out.println("Total:"+totalamount);
 
     }
 
